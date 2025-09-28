@@ -1,10 +1,22 @@
-import { useEffect, useState } from "react";
-import type { Schema } from "../amplify/data/resource";
-import { useAuthenticator } from '@aws-amplify/ui-react';
-import { generateClient } from "aws-amplify/data";
+//import { useEffect, useState } from "react";
+//import type { Schema } from "../amplify/data/resource";
+//import { useAuthenticator } from '@aws-amplify/ui-react';
+//import { generateClient } from "aws-amplify/data";
 
-const client = generateClient<Schema>();
+//const client = generateClient<Schema>();
 
+// Assuming you saved the file in src/components/
+import SnapShotCapture from '../src/components/SnapShotCapture'; 
+
+const App: React.FC = () => {
+  return (
+    // Render the new component within your application's structure
+    <SnapShotCapture />
+  );
+};
+
+export default App;
+/*
 function App() {
   const { signOut } = useAuthenticator();
   const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
@@ -47,3 +59,4 @@ function App() {
 }
 
 export default App;
+*/
