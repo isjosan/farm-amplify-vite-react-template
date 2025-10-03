@@ -179,6 +179,8 @@ const App: React.FC = () => {
             {isCameraActive ? 'Stop Camera' : 'Start Camera'}
           </button>
 
+          
+
           {/* Take Snapshot Button */}
           <button
             onClick={takeSnapshot}

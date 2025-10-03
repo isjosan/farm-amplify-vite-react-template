@@ -1,22 +1,28 @@
-//import { useEffect, useState } from "react";
-//import type { Schema } from "../amplify/data/resource";
-//import { useAuthenticator } from '@aws-amplify/ui-react';
-//import { generateClient } from "aws-amplify/data";
-
-//const client = generateClient<Schema>();
-
-// Assuming you saved the file in src/components/
+import { useAuthenticator } from '@aws-amplify/ui-react';
+// Assuming you saved the application component file in src/components/
 import SnapShotCapture from '../src/components/SnapShotCapture'; 
 
+
 const App: React.FC = () => {
+  const { signOut } = useAuthenticator();
   return (
-    // Render the new component within your application's structure
-    <SnapShotCapture />
+    <main>
+      // Render the new component within your application's structure
+      <SnapShotCapture />
+      <button onClick={signOut}>Sign Out</button>
+    </main>
   );
 };
 
 export default App;
+
+
 /*
+import { useEffect, useState } from "react";
+import type { Schema } from "../amplify/data/resource";
+import { generateClient } from "aws-amplify/data";
+const client = generateClient<Schema>();
+
 function App() {
   const { signOut } = useAuthenticator();
   const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
