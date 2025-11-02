@@ -187,7 +187,7 @@ const App: React.FC = () => {
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">2. Select File to Upload to Storage</h2>
                 <FileUploader
                   acceptedFileTypes={['image/*']}
-                  path="public/user-uploads/" 
+                  path="picture-submissions/" 
                   maxFileCount={1}
                   isResumable
                   accessLevel={accessLevel} 
